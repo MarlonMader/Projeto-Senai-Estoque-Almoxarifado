@@ -1,0 +1,39 @@
+<div th:replace="compartilhado/top"></div>
+
+<!-- Begin Page Content -->
+<div class=" container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Edição de Cadastros</h1>
+    <p class="mb-4">Edição de cadastro dos Itens</p>
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4" style="padding: 30px;">
+            <form method="POST" th:action="@{'/cadastro/' + ${cadastro?.id} + '/atualizar'}">
+                <div class="form-group">
+                        <label for="codigo">Codigo</label>
+                        <input type="text" class="form-control" th:value="${cadastro?.codigo}" required id="codigo"
+                            name="codigo" placeholder="Digite o Codigo do produto:">
+                </div>
+                <div class="form-group">
+                    <label for="produto">Produto</label>
+                    <input type="text" class="form-control" th:value="${cadastro?.produto}" required id="produto" name="produto"
+                        placeholder="Digite o nome do produto:">
+                </div>
+                <div class="form-group">
+                    <label for="quantidade">Quantidade</label>
+                    <input type="text" class="form-control" th:value="${cadastro?.quantidade}" required id="quantidade"
+                        name="quantidade" placeholder="Digite a quantidade do produto:">
+                </div>
+                <div class="form-group">
+                    <label for="fornecedor">Fornecedor</label>
+                    <input type="text" class="form-control" th:value="${cadastro?.fornecedor}" required id="fornecedor"
+                        name="fornecedor" placeholder="Digite o Fornecedor do produto:">
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+
+    </div>
+<!-- /.container-fluid -->
+<div th:replace="compartilhado/baixo"></div>
