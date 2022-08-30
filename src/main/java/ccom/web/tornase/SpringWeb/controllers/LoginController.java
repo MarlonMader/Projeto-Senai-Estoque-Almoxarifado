@@ -21,15 +21,14 @@ public class LoginController {
     }
 
 
-
     @PostMapping("/logar")
-    public String logar(Model model, JA log, String lembrar ){
-        boolean loc = this.repo.login(log.getEmail(), log.getSenha());
-        if(loc = null != null){
-            return "redirect:/";
-        }
-        model.addAttribute("erro","Usuario ou senha inválidos" );
-        return "home/index";
+    public String logar(Model model, JA jaParam, String lembrar ){
+      JA ja = this.repo.Login(jaParam.getEmail(), jaParam.getSenha());
+      if(ja != null){
+        return "redirect:/";
+      }
+      model.addAttribute("erro", "Usuário ou senha inválido" );
+        return "login/index";
     }
     
 }

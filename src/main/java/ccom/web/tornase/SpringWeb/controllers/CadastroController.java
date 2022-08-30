@@ -49,7 +49,7 @@ public class CadastroController {
         return "/cadastro/editar";
     } 
 
-    @PostMapping("/administradores/{id}/atualizar")
+    @PostMapping("/cadastro/{id}/atualizar")
     public String atualizar(@PathVariable int id, Cadastrar cadastrar){
       // if(!repo.exist(id)){
       if(!repo.existsById(id)){

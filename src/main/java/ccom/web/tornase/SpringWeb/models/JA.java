@@ -12,8 +12,6 @@ import javax.persistence.Table;
 public class JA {
       @Id
       @GeneratedValue(strategy = GenerationType.IDENTITY)
-      @Column(name = "id")
-      private int id;
     
       @Column(name = "nome", length = 100, nullable = false)
       private String nome;
@@ -23,14 +21,6 @@ public class JA {
     
       @Column(name = "senha", length = 255, nullable = false)
       private String senha;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getNome() {
         return nome;

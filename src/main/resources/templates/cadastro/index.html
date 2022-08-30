@@ -10,7 +10,7 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <a href="/cadastro/novo" class="btn btn-primary" style="margin-right: 20px;">Novo</a>
+            <a href="/cadastro/novo" class="btn btn-primary" style="margin-right: 20px;background:#2273E1;">Novo</a>
             <h6 class="m-0 font-weight-bold text-primary" style="display: inline-block;">Lista de Cadastro</h6>
         </div>
         <div class="card-body">
@@ -45,9 +45,9 @@
                             <td th:text="${cadastro.produto}"></td>
                             <td th:text="${cadastro.quantidade}"></td>
                             <td th:text="${cadastro.fornecedor}"></td>
-                            <td><a th:href="'/cadastro/' + ${cadastro.id}" class="btn btn-warning">Alterar</a></td>
+                            <td><a th:href="'/cadastro/' + ${cadastro.id}" class="btn btn-warning" style="margin-left: 30%;">Alterar</a></td>
                             <td><a href="#" th:onclick="'if(confirm(\'Confirma ?\')) {window.location.href = \'' + @{/cadastro/{id}(id=${cadastro.id})} + '/excluir\'}'"
-                                class="btn btn-danger">Excluir</a></td>
+                                class="btn btn-danger" style="margin-left: 30%;">Excluir</a></td>
                         </tr>
                     </tbody>
                 </table>
