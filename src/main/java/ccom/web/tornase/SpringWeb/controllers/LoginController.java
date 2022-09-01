@@ -1,5 +1,7 @@
 package ccom.web.tornase.SpringWeb.controllers;
 
+import java.io.IOException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -29,6 +31,11 @@ public class LoginController {
       }
       model.addAttribute("erro", "Usuário ou senha inválido" );
         return "login/index";
+    }
+
+    @GetMapping("/sair")
+    public String logar(){
+      return "redirect:/login";
     }
     
 }
